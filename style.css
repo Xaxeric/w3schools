@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: green;
+    background-color: #272A38;
 }
 
 header {
@@ -12,6 +12,8 @@ header {
     color: black;
     background-color: white;
     align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 header .logo img {
@@ -50,7 +52,7 @@ header .login button.signup{
     color: white;
     border-radius: 360px;
     border: none;
-    background-color: green;
+    background-color: #00BA64;
     width: 100px;
     height: 30px;
     margin-right: 10px;
@@ -70,7 +72,7 @@ header .login button.login{
 }
 
 header .login button.login:hover{
-    background-color: green;
+    background-color: #00BA64;
     color: white;
     transition: ease-in-out 0.3s;
 }
