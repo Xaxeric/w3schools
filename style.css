@@ -1,78 +1,390 @@
-body {
+body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #272A38;
+    background-color: white ;
 }
 
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     color: black;
     background-color: white;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 10px;
-    padding-left: 10px;
+    height: 60px;
 }
 
-header .logo img {
+header .Logo img{
+    left: -140%;
     width: 60px;
-    cursor: pointer;
+    position: relative;
 }
 
 header nav ul{
-    /* FLEXBOX */
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-inline: 7px;
 }
 
 header nav ul li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 7px;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     color: inherit;
+    padding-inline: 10px;
+}
+
+header nav ul li a:hover {
+    display: flex;
+    background-color: #04AA6D;
+    height: 60px;
+    align-items: center;
+    color: white;
+    transition: ease-in-out 0.1s;
+    padding-inline: 10px;
 }
 
 header nav ul li button{
-    background-color: transparent;
-    border: 1px solid gray;
+    /* background-color: grey; */
+    border: 1px solid grey;
     width: 150px;
-    height: 30px;
+    height: 40px;
+    /* color:black; */
     border-radius: 360px;
     text-align: left;
     cursor: text;
 }
 
 header .login button.signup{
+    border-radius: 200px;
     color: white;
-    border-radius: 360px;
     border: none;
-    background-color: #00BA64;
+    background-color: #04AA6D;
     width: 100px;
     height: 30px;
     margin-right: 10px;
-    cursor: pointer;
+    cursor: text;
+}
+
+header .login button.signup:hover{
+    background-color: green;
+    color: white;
+    transition: ease-in-out 0.1s;
 }
 
 header .login button.login{
-    border-radius: 360px;
+    border-radius: 200px;
+    color: black;
     border: none;
-    background-color: rgb(190, 244, 209);
-    width: 100px;
+    background-color: #D9EEE1;
+    width: 90px;
     height: 30px;
     margin-right: 10px;
-    color: black;
-    transition: ease-in-out 0.3s;
     cursor: pointer;
+    text-align:right;
 }
 
 header .login button.login:hover{
-    background-color: #00BA64;
+    background-color: green;
     color: white;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.1s;
+}
+
+
+
+header .login button.signup,
+header .login button.login {
+    height: 40px;
+    margin-right: -40px; /* Adjust the negative margin to overlap */
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+header .login button.signup {
+    z-index: 1; /* Ensure signup button is on top */
+}
+
+
+main {
+    background-image: url(bg.gif);
+    background-size: cover;
+    height: 710px;
+    width: 100%;
+    position: relative;
+}
+
+main .mainKonten {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .mainKonten h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    margin-top: 110px;
+}
+
+main .mainKonten h4 {
+    font-size: 23px;
+    color: #FFF4A3;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+main .mainKonten a{
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: white;
+    margin-top: 30px;
+}
+
+main .mainKonten a:hover {
+    color: #FFF4A3;
+}
+
+main .mainKonten input {
+    height: 50px;
+    width: 500px;
+    border-radius: 360px;
+    text-align: left;
+    padding-left: 25px;
+    font-weight: bolder;
+    font-size:medium ;
+    margin-top: 30px;
+    border: none;
+}
+
+main .mainKonten img {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+/* Media query to hide the image when the webpage is resized */
+@media screen and (max-width: 1250px) {
+    main .mainKonten img {
+        display: none;
+    }
+}
+
+.htmlk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.htmlk h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding-top: 40px;
+}
+
+.htmlk h4 {
+    margin-bottom: 20px;
+    margin-top:20px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.htmlk button {
+    width: 250px;
+    height: 60px;
+    border-radius: 360px;
+    background-color: #282A35;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.htmlk button:hover{
+    background-color: black;
+}
+
+.sql {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #96D4D4;
+}
+
+.sql h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.sql h4 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sql button {
+    width: 250px;
+    height: 60px;
+    border-radius: 360px;
+    background-color: #282A35;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.sql button:hover{
+    background-color: black;
+}
+
+.main {
+    background-color: #282A35;
+}
+
+.main .subKonten {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .subKonten .card {
+    margin: 30px;
+    background-color: salmon ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 700px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.main .subKonten .card h1 {
+    margin-bottom: 20px;
+    font-size: 53px;
+}
+
+.main .subKonten .card p {
+    margin-bottom: 40px;
+    font-size: 21px;
+}
+
+.main .subKonten .card button {
+    width: 250px;
+    height: 60px;
+    border-radius: 360px;
+    background-color: #282A35;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.main .subKonten .card button:hover{
+    background-color: black;
+}
+
+.main .subKonten .card:nth-child(1) {
+    background-color: #FFC0C7;
+}
+
+.main .subKonten .card:nth-child(2) {
+    background-color: #FFF4A3;
+}
+
+.main .subKonten .card:nth-child(3) {
+    background-color: #F3ECEA;
+}
+
+.main .subKonten .card:nth-child(4) {
+    background-color: #D9EEE1;
+}
+
+.main .subKonten .card:nth-child(5) {
+    background-color: #96D4D4;
+}
+
+.main .subKonten .card:nth-child(6) {
+    background-color: #E7E9EB;
+}
+
+footer {
+    background-image: url(bg.gif);
+    width: 100%;
+    height: 767px;
+}
+
+footer .mainFooter{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #FFF4A3;
+}
+
+footer img{
+    width: 100px;
+}
+
+footer .mainFooter h4 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer .mainFooter h4 a:hover{
+    text-decoration: underline;
+}
+
+footer .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: white;
+    margin-left: 100px;
+}
+
+footer .main .container {
+    margin-inline: 60px;
+}
+
+footer .main .container h1 {
+    font-size: 20px; 
+}
+
+footer .main .container p:hover{
+    color: #FFF4A3;
+}
+
+footer .land{
+    width: 30%;
+    position: relative;
+    right: -80%;
+    top: 31%;
+    transform: translate(-50%, -50%);
 }
